@@ -2,7 +2,7 @@ const fs = require('fs');
 const https = require('https');
 const path = require('path');
 
-const RAW_URL = '[https://raw.githubusercontent.com/hudchew/thai-address/main/thailand-address-bilingual.json](https://raw.githubusercontent.com/hudchew/thai-address/main/thailand-address-bilingual.json)';
+const RAW_URL = 'https://raw.githubusercontent.com/hudchew/thai-address/main/thailand-address-bilingual.json';
 
 const LOCAL_PATH = './src/lib/data/thailand-address.json';
 const dir = path.dirname(LOCAL_PATH);

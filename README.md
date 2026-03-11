@@ -15,7 +15,7 @@
 
 1. สร้างไฟล์ `scripts/sync-address.js` ในโปรเจกต์ของคุณแล้ววางโค้ดนี้ลงไป:
 
-```
+```javascript
 const fs = require('fs');
 const https = require('https');
 const path = require('path');
@@ -36,7 +36,7 @@ https.get(RAW_URL, (res) => {
 
 1. เพิ่ม Script ใน `package.json`:
 
-```
+```json
 "scripts": {
   "sync-address": "node scripts/sync-address.js"
 }
@@ -46,7 +46,7 @@ https.get(RAW_URL, (res) => {
 
 เมื่อมีการเพิ่มตำบลใหม่หรือแก้ไขข้อมูลใน GitHub นี้ คุณแค่รันคำสั่ง:
 
-```
+```bash
 npm run sync-address
 ```
 
@@ -56,7 +56,7 @@ npm run sync-address
 
 ก๊อบปี้ไปวางใน `types/thai-address.ts`:
 
-```
+```typescript
 export interface ThaiName { th: string; en: string; }
 export interface ThaiSubdistrict { n: ThaiName; z: string; }
 export interface ThaiDistrict { n: ThaiName; s: ThaiSubdistrict[]; }
@@ -67,7 +67,7 @@ export interface ThaiProvince { p: ThaiName; d: ThaiDistrict[]; }
 
 ตัวอย่างการทำ Cascading Select (จังหวัด > อำเภอ > ตำบล):
 
-```
+```tsx
 import { useState } from 'react';
 import data from '@/lib/data/thailand-address.json';
 import { ThaiProvince, ThaiDistrict } from '@/types/thai-address';
@@ -109,7 +109,7 @@ export default function AddressSelector() {
 
 การใช้ร่วมกับ Signals ใน Angular 17+:
 
-```
+```typescript
 import { Component, signal, computed } from '@angular/core';
 import thaiAddressData from '../lib/data/thailand-address.json';
 import { ThaiProvince } from '../types/thai-address';

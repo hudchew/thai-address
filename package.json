@@ -24,7 +24,7 @@
     "json"
   ],
   "author": "hudchew",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "files": [
     "thailand-address-bilingual.json",
