@@ -4,16 +4,36 @@
   "description": "The most up-to-date Thai Address database (Bilingual: TH/EN) with easy sync CLI tool.",
   "main": "index.js",
   "scripts": {
+    "validate": "node scripts/validate.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hudchew/thai-address.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "thai-address",
+    "thailand",
+    "address",
+    "province",
+    "district",
+    "subdistrict",
+    "zipcode",
+    "postcode",
+    "bilingual",
+    "json"
+  ],
+  "author": "hudchew",
   "license": "ISC",
   "type": "commonjs",
+  "files": [
+    "thailand-address-bilingual.json",
+    "scripts",
+    "types",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md"
+  ],
   "bugs": {
     "url": "https://github.com/hudchew/thai-address/issues"
   },
