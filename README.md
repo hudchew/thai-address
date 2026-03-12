@@ -156,7 +156,7 @@ export class AppAddressComponent {
 
 ## 🤝 4. การมีส่วนร่วม (Contribution)
 
-พบคำสะกดผิด? หรืออยากเพิ่มตำบลใหม่? เรายินดีต้อนรับทุกคนครับ! 
+พบคำสะกดผิด? หรืออยากเพิ่มตำบลใหม่? เรายินดีต้อนรับทุกคน! 
 
 กรุณาอ่าน [คู่มือการมีส่วนร่วม (CONTRIBUTING.md)](CONTRIBUTING.md) สำหรับขั้นตอนการ Fork, Validate, และเปิด Pull Request.
 
@@ -169,7 +169,7 @@ export class AppAddressComponent {
    # หรือ
    node scripts/validate.js
    ```
-4. ส่ง **Pull Request** มาได้เลยครับ!
+4. ส่ง **Pull Request** มาได้เลย!
 
 ## 📜 License
 

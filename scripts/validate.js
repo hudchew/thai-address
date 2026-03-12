@@ -20,7 +20,7 @@ try {
     });
   });
 
-  console.log('✅ ข้อมูลถูกต้องพร้อมใช้งานครับ!');
+  console.log('✅ ข้อมูลถูกต้องพร้อมใช้งาน!');
 } catch (e) {
   console.error('❌ ตรวจพบข้อผิดพลาด:', e.message);
   process.exit(1);

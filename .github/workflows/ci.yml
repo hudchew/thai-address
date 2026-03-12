@@ -10,20 +10,17 @@ jobs:
   check_and_minify:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # เพื่อให้หุ่นยนต์มีสิทธิ์เขียนไฟล์กลับเข้า Git ได้ครับ
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
         with:
-          # ดึงข้อมูลแบบเต็มมาเพื่อให้ git ทำงานได้ถูกต้อง
           fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-
+          node-version: '24'
       - name: Validate Data
         run: npm run validate
 
@@ -43,5 +40,5 @@ jobs:
             git commit -m "chore: auto-minify address data [skip ci]"
             git push
           else
-            echo "✅ ไม่มีอะไรเปลี่ยนแปลง ไม่ต้องบันทึกเพิ่มครับ"
+            echo "✅ ไม่มีอะไรเปลี่ยนแปลง ไม่ต้องบันทึกเพิ่ม"
           fi
