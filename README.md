@@ -1,6 +1,7 @@
 # 🇹🇭 Thai Address (Bilingual)
 
 ฐานข้อมูลที่อยู่ประเทศไทย (จังหวัด-อำเภอ-ตำบล-รหัสไปรษณีย์) แบบ 2 ภาษา (TH/EN) ที่เบาและอัปเดตง่ายที่สุดสำหรับนักพัฒนา
+
 ## ✨ ทำไมต้องใช้ตัวนี้?
 
 - 🌍 **Bilingual:** รองรับทั้งภาษาไทยและภาษาอังกฤษ (ชื่อเฉพาะ คลีน ไม่มีคำนำหน้า Khet/Amphoe/Tambon)
@@ -16,7 +17,7 @@
 - **Full:** `thailand-address-bilingual.json` (~1.5 MB)
 - **Minified:** `thailand-address-bilingual.min.json` (**~655 KB** - แนะนำ!)
 
-สร้างไฟล์ `scripts/sync-address.js` ในโปรเจกต์ของคุณ:
+สร้างไฟล์ `scripts/sync-address.js` ในโปรเจกต์ของคุณแล้ววางโค้ดนี้ลงไป:
 
 ```javascript
 const fs = require('fs');
@@ -27,7 +28,6 @@ const path = require('path');
 const RAW_URL = 'https://raw.githubusercontent.com/hudchew/thai-address/main/thailand-address-bilingual.min.json';
 
 const LOCAL_PATH = './src/lib/data/thailand-address.json';
-```
 const dir = path.dirname(LOCAL_PATH);
 
 if (!fs.existsSync(dir)){

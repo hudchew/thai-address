@@ -9,8 +9,6 @@ on:
 jobs:
   check_and_minify:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # ยันต์กัน Warning ตามคำแนะนำของ GitHub
     permissions:
       contents: write
 
