@@ -1,72 +1,31 @@
-# Contributing to Thai Address
+# 🤝 การมีส่วนร่วม (Contributing)
 
-First off, thank you for considering contributing to `thai-address`! It's people like you that make Open Source software such a great community to learn, inspire, and create.
+เรายินดีต้อนรับทุกคนที่อยากช่วยให้ฐานข้อมูลที่อยู่ประเทศไทยชุดนี้ถูกต้องและทันสมัยที่สุด! ไม่ว่าจะเป็นการแจ้งคำสะกดผิด หรือการเพิ่มตำบล/อำเภอที่เกิดขึ้นใหม่
 
-## How to Contribute
+## 🛠 มาตรฐานข้อมูลของเรา (Data Standards)
 
-The primary goal of this repository is to keep the Thai address database (`thailand-address-bilingual.json`) accurate and up-to-date. If you spot a typo, a missing subdistrict, or an incorrect zipcode, please help us fix it!
+เพื่อให้ข้อมูลมีความเป็นเอกภาพและใช้งานง่ายที่สุด กรุณาปฏิบัติตามเกณฑ์ดังนี้:
 
-### 1. Fork the Repository
+1. **Clean English Names:** ไม่ต้องใส่คำนำหน้าประเภท Khet, Amphoe, District, Khwaeng หรือ Tambon ในชื่อภาษาอังกฤษ (เช่น ให้ใช้ `Phra Nakhon` แทน `Khet Phra Nakhon`)
+2. **Official IDs (i):** ต้องเป็นรหัสมาตรฐานจากกรมการปกครอง (DOPA Code) เท่านั้น:
+   - จังหวัด: 2 หลัก (เช่น `10`)
+   - อำเภอ: 4 หลัก (เช่น `1001`)
+   - ตำบล: 6 หลัก (เช่น `100101`)
+3. **Zipcode (z):** ต้องเป็นตัวเลข 5 หลักเสมอ
 
-Click the "Fork" button at the top right of this repository to create your own copy. Clone your forked repository to your local machine:
+## 🚀 ขั้นตอนการส่ง Pull Request
 
-```bash
-git clone https://github.com/YOUR_USERNAME/thai-address.git
-cd thai-address
-```
+1. **Fork** Repository นี้ไปที่บัญชีของคุณ
+2. แก้ไขข้อมูลในไฟล์หลัก **`thailand-address-bilingual.json`** เท่านั้น (ไม่ต้องแก้ไฟล์ `.min.json` เพราะเราจะรันสคริปต์ Generate ให้เองตอน Merge)
+3. **ตรวจสอบความถูกต้อง (Validate):** ทุกครั้งก่อนส่ง PR กรุณารันคำสั่ง:
+   ```bash
+   npm run validate
+   ```
+   *หมายเหตุ: PR ที่ไม่ผ่านการ Validate จะไม่ถูกนำมาพิจารณา*
+4. **ส่ง Pull Request:** เขียนคำอธิบายสั้นๆ ว่าคุณแก้ไขหรือเพิ่มข้อมูลส่วนไหนบ้าง
 
-### 2. Make Your Changes
+## 📝 การแจ้งปัญหา (Reporting Issues)
 
-Open `thailand-address-bilingual.json` and make the necessary corrections or additions.
+หากพบข้อมูลผิดพลาดแต่ไม่สะดวกส่ง PR คุณสามารถเปิด [GitHub Issue](https://github.com/hudchew/thai-address/issues) เพื่อแจ้งเราได้ครับ
 
-** Important Rules for the JSON file:**
-- Every object must follow the strict abbreviation schema:
-  - `p` = Province
-  - `d` = District
-  - `s` = Subdistrict
-  - `n` = Name object `{ "th": "...", "en": "..." }`
-  - `z` = Zipcode (String)
-- Keep the structure clean and well-formatted.
-
-### 3. Validate Your Changes
-
-Before committing, you **MUST** run the validation script to ensure no data is broken:
-
-```bash
-npm run validate
-# or
-node scripts/validate.js
-```
-
-If the script outputs `✅ ข้อมูลถูกต้องพร้อมใช้งานครับ!`, your changes are good to go!
-If it outputs an error (`❌ ตรวจพบข้อผิดพลาด`), please fix the issue before proceeding.
-
-### 4. Commit and Push
-
-Create a new branch for your changes:
-
-```bash
-git checkout -b fix/missing-subdistrict
-```
-
-Commit your changes with a clear message:
-
-```bash
-git commit -m "fix(data): add missing subdistrict X in district Y, province Z"
-```
-
-Push to your forked repository:
-
-```bash
-git push origin fix/missing-subdistrict
-```
-
-### 5. Open a Pull Request
-
-Go back to the original `hudchew/thai-address` repository on GitHub. You should see a prompt to "Compare & pull request". Click it, provide a brief description of what you fixed or added, and submit the PR.
-
- Maintainer จะรีบเข้ามาตรวจและ merge ให้เร็วที่สุดครับ! 🚀
-
-## Questions?
-
-If you have any questions, feel free to open an issue before making a PR.
+ขอบคุณที่ช่วยกันสร้างฐานข้อมูลดีๆ ให้กับนักพัฒนาชาวไทยครับ! 🇹🇭✨
